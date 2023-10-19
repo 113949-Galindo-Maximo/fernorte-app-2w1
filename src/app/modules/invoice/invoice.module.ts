@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './components/home/home.component';
 import { DeleteFacturaComponent } from './components/delete-factura/delete-factura.component';
 import { InvoiceDetailComponent } from './components/invoice-detail/invoice-detail.component';
+import { RegistrarFacturaComponent } from './components/registrar-factura/registrar-factura.component';
 
 @NgModule({
-  declarations: [HomeComponent, InvoiceDetailComponent,DeleteFacturaComponent],
+  declarations: [HomeComponent, InvoiceDetailComponent,DeleteFacturaComponent, RegistrarFacturaComponent],
   providers: [],
   imports: [CommonModule],
   exports: [HomeComponent],
