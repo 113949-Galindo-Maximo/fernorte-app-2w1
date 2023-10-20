@@ -4,21 +4,13 @@
 <ng-template #content let-modal>
   <div class="modal-header">
     <h4 class="modal-title">Formas de pago</h4>
-    <button
-      type="button"
-      class="btn-close"
-      aria-label="Close"
-      (click)="modal.dismiss('Cross click')"
-    ></button>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
   </div>
   <div class="modal-body">
     <div class="container text-center">
       <form>
-        <fn-form-pago
-          [total]="invoiceTotal"
-          [resto]="remainPayment"
-          (onCalcularRestante)="actualizarRestante($event)"
-        ></fn-form-pago>
+        <fn-form-pago [total]="invoiceTotal" [resto]="remainPayment"
+          (onCalcularRestante)="actualizarRestante($event)"></fn-form-pago>
       </form>
     </div>
   </div>
@@ -29,11 +21,7 @@
     <div class="col">
       <label>Restante: $ {{ remainPayment }}</label>
     </div>
-    <button
-      type="button"
-      class="btn btn-light"
-      (click)="modal.close('Close click')"
-    >
+    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">
       Cerrar
     </button>
   </div>
