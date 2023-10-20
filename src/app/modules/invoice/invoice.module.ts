@@ -5,9 +5,11 @@ import { DeleteFacturaComponent } from './components/delete-factura/delete-factu
 import { InvoiceDetailComponent } from './components/invoice-detail/invoice-detail.component';
 import { RegistrarFacturaComponent } from './components/registrar-factura/registrar-factura.component';
 import { GestionFacturaComponent } from './components/gestion-factura/gestion-factura.component';
+import { PendingOrdersComponent } from './components/pending-orders/pending-orders.component';
 
 @NgModule({
-  declarations: [HomeComponent, InvoiceDetailComponent,DeleteFacturaComponent, RegistrarFacturaComponent, GestionFacturaComponent],
+  declarations: [HomeComponent, InvoiceDetailComponent,DeleteFacturaComponent, RegistrarFacturaComponent, PendingOrdersComponent,GestionFacturaComponent],
+
   providers: [],
   imports: [CommonModule],
   exports: [HomeComponent],

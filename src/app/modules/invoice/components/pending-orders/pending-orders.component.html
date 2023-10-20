@@ -1,0 +1,56 @@
+<body class="bg-secundario">
+    <div class="container-fluid custom-container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card bg-custom-color">
+                    <div class="card-body text-center">
+                        <h1 class="card-title text-white">Lista de pedidos</h1>
+                        <div class="row justify-content-start">
+                            <div class="col-2">
+                                <input type="text" class="form-control" id="inpNmbOrder" name="NmbOrder"
+                                    placeholder="N° de pedido" class="input-text" (input)="buscarPedidos($event)">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-striped cust-table">
+                    <thead>
+                        <tr>
+                            <th>N°</th>
+                            <th>Fecha</th>
+                            <th>Cliente</th>
+                            <th>Subtotal de pedido</th>
+                            <th>Total de pedido</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let order of ordersToShow">
+                            <td>{{ order.id }}</td>
+                            <td>{{ order.fecha }}</td>
+                            <td>{{ order.idCliente }}</td>
+                            <td>{{ order.subtotal }}</td>
+                            <td>{{ order.total }}</td>
+                            <td><a href="#">Ver</a><a href="#" class="m-2">Fact</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
