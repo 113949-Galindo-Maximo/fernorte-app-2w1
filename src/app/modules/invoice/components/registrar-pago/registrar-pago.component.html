@@ -1,0 +1,42 @@
+Test funcionalidad del componente
+
+<button class="btn btn-outline-primary mb-2 me-2" (click)="openModal(content)">
+  Metodos de pago
+</button>
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Formas de pago</h4>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    ></button>
+  </div>
+  <div class="modal-body">
+    <div class="container text-center">
+      <form>
+        <fn-form-pago
+          [total]="invoiceTotal"
+          [resto]="remainPayment"
+          (onCalcularRestante)="actualizarRestante($event)"
+        ></fn-form-pago>
+      </form>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <div class="col">
+      <label>Total a pagar: $ {{ invoiceTotal }}</label>
+    </div>
+    <div class="col">
+      <label>Restante: $ {{ remainPayment }}</label>
+    </div>
+    <button
+      type="button"
+      class="btn btn-light"
+      (click)="modal.close('Close click')"
+    >
+      Cerrar
+    </button>
+  </div>
+</ng-template>
