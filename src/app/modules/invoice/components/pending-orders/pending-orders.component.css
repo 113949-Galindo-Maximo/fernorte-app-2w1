@@ -55,6 +55,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
 }
 
 .modal-content {
@@ -64,6 +65,7 @@ body {
     max-width: 80%;
     /* Ancho máximo del modal */
     position: relative;
+    border-radius: 10px;
 }
 
 

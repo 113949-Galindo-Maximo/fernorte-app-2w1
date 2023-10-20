@@ -44,10 +44,8 @@ export class PendingOrdersComponent implements OnInit {
     }
   }
   viewDetail(order: Order): void {
-    console.log("llama al metodo")
     this.SelectedDetails = order.detalles;
     this.calculateSubtotal();
-    console.log(this.SelectedDetails)
     this.isModalOpen = true;
   }
 
