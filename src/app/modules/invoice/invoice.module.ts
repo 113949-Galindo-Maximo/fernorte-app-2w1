@@ -4,9 +4,10 @@ import { HomeComponent } from './components/home/home.component';
 import { DeleteFacturaComponent } from './components/delete-factura/delete-factura.component';
 import { InvoiceDetailComponent } from './components/invoice-detail/invoice-detail.component';
 import { RegistrarFacturaComponent } from './components/registrar-factura/registrar-factura.component';
+import { GestionFacturaComponent } from './components/gestion-factura/gestion-factura.component';
 
 @NgModule({
-  declarations: [HomeComponent, InvoiceDetailComponent,DeleteFacturaComponent, RegistrarFacturaComponent],
+  declarations: [HomeComponent, InvoiceDetailComponent,DeleteFacturaComponent, RegistrarFacturaComponent, GestionFacturaComponent],
   providers: [],
   imports: [CommonModule],
   exports: [HomeComponent],
