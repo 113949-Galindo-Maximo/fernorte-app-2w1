@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { OrderService } from '../../services/order.service';
 import { Order } from '../../models/order';
+import { Detail } from '../../models/Detail';
 
 @Component({
   selector: 'fn-pending-orders',
@@ -14,6 +15,9 @@ export class PendingOrdersComponent implements OnInit {
   pedidosFiltrados: Order[] = [];
   //one to load with all data
   orders: Order[] = [];
+  SelectedDetails:Detail [] = [];
+
+  isModalOpen: boolean = false
   constructor(private orderService: OrderService) {
   }
   ngOnInit(): void {
@@ -38,5 +42,28 @@ export class PendingOrdersComponent implements OnInit {
     } else {
         this.ordersToShow = this.orders
     }
+  }
+  viewDetail(order: Order): void {
+    console.log("llama al metodo")
+    this.SelectedDetails = order.detalles;
+    this.calculateSubtotal();
+    console.log(this.SelectedDetails)
+    this.isModalOpen = true;
+  }
+
+  closeModal() {
+    this.isModalOpen = false; 
+    this.SelectedDetails = [];
+  }
+  billOrder(order: Order): void {
+    //TODO Redirect to registrar factura
+  }
+
+  calculateSubtotal():void{
+    if(this.SelectedDetails.length > 0){
+    this.SelectedDetails.forEach(detail=>{
+      detail.subtotal = detail.cantidad * detail.precioUnitario
+    })
+  }
   }
 }

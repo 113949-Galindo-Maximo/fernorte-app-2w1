@@ -15,7 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     GestionFacturaComponent,
     RegistrarPagoComponent,
     FormPagoComponent],
-
+    
   providers: [],
   imports: [CommonModule, FormsModule],
   exports: [HomeComponent],

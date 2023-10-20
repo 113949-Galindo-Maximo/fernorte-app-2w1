@@ -3,4 +3,5 @@ export class Detail {
     descripcion: string = '';
     precioUnitario: number =0;
     cantidad: number = 0;
+    subtotal: number = 0;
 }
