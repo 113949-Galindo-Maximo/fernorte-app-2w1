@@ -34,6 +34,10 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.input-text:focus {
+  border: none;
+}
+
 .table-container {
   max-height: 290px;
   overflow-y: auto;
